@@ -1,0 +1,10 @@
+{
+  "entity": "purroof-group",
+  "endpoints": [
+    {
+      "name": "Purroof Group",
+      "url": "https://rpc.purroofgroup.com/evm",
+      "description": "We're purr-oud to provide a free archive Hyperliquid EVM RPC endpoint for the community. Reliable, fast, and completely free. Just like a cat's purr."
+    }
+  ]
+} 

@@ -1,0 +1,12 @@
+{
+  "$id": "peer.schema.json",
+  "type": "object",
+  "required": ["entity", "addresses"],
+  "properties": {
+    "entity": { "type": "string" },
+    "addresses": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+} 

@@ -1,0 +1,15 @@
+{
+  "$id": "meta.schema.json",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": { "type": "string" },
+    "website": { "type": "string", "format": "uri" },
+    "description": { "type": "string" },
+    "logoUrl": { "type": "string", "format": "uri" },
+    "socials": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    }
+  }
+} 

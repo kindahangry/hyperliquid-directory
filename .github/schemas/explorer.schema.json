@@ -1,0 +1,10 @@
+{
+  "$id": "explorer.schema.json",
+  "type": "object",
+  "required": ["entity", "url"],
+  "properties": {
+    "entity": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "description": { "type": "string" }
+  }
+} 

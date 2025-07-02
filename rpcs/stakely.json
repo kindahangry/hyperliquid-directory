@@ -1,0 +1,10 @@
+{
+  "entity": "stakely",
+  "endpoints": [
+    {
+      "name": "Stakely",
+      "url": "https://hyperliquid-json-rpc.stakely.io",
+      "description": "Your trusted partner for Non-Custodial Staking. We provide secure, transparent, and reliable staking solutions."
+    }
+  ]
+} 

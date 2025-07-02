@@ -1,0 +1,10 @@
+{
+  "entity": "hyperbeat-p2p-hypio",
+  "endpoints": [
+    {
+      "name": "HyperBeat x P2P x Hypio",
+      "url": "https://hl-mainnet.rpc.p2p.world/evm",
+      "description": "Liquidity engine for HyperEVM, a collaboration between HyperBeat, P2P and Hypio."
+    }
+  ]
+} 

@@ -1,0 +1,11 @@
+{
+  "entity": "validao",
+  "endpoints": [
+    {
+      "name": "ValiDAO",
+      "url": "https://hyperliquid-rpc.validao.xyz/evm",
+      "description": "Load-balanced RPC with multiple bare-metal and Akash-backed backends",
+      "rateLimits": {}
+    }
+  ]
+} 

@@ -1,0 +1,24 @@
+{
+  "$id": "rpc.schema.json",
+  "type": "object",
+  "required": ["entity", "endpoints"],
+  "properties": {
+    "entity": { "type": "string" },
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "description": { "type": "string" },
+          "rateLimits": {
+            "type": "object",
+            "additionalProperties": { "type": "number" }
+          }
+        }
+      }
+    }
+  }
+} 

@@ -1,0 +1,10 @@
+{
+  "entity": "hyperliquid-labs",
+  "endpoints": [
+    {
+      "name": "Hyperliquid Labs",
+      "url": "https://rpc.hyperliquid.xyz/evm",
+      "description": "Hyperliquid Labs public RPC endpoint"
+    }
+  ]
+} 

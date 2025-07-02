@@ -1,0 +1,36 @@
+name: Validate JSON resources
+
+on:
+  pull_request:
+    paths:
+      - '**/*.json'
+      - '.github/schemas/**'
+      - 'scripts/**'
+      - 'package.json'
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '**/*.json'
+      - '.github/schemas/**'
+      - 'scripts/**'
+      - 'package.json'
+      - '.github/workflows/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run schema validation
+        run: npm run validate 

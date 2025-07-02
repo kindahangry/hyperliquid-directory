@@ -1,0 +1,10 @@
+{
+  "entity": "usdt0-luganodes",
+  "endpoints": [
+    {
+      "name": "USDT0 Luganodes",
+      "url": "https://hyperliquid.lgns.xyz/evm",
+      "description": "Institutional-grade RPC provided by Luganodes in partnership with USDT0"
+    }
+  ]
+} 

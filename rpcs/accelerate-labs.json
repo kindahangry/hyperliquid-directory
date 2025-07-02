@@ -1,0 +1,10 @@
+{
+  "entity": "accelerate-labs",
+  "endpoints": [
+    {
+      "name": "Accelerate Labs",
+      "url": "https://rpc.acc8.dev/evm",
+      "description": "Thesis Driven Web3 Research & Development"
+    }
+  ]
+} 

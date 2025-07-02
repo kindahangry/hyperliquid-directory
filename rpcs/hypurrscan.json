@@ -1,0 +1,10 @@
+{
+  "entity": "hypurrscan",
+  "endpoints": [
+    {
+      "name": "Hypurrscan",
+      "url": "https://rpc.hypurrscan.io/evm",
+      "description": "L1 explorer RPC"
+    }
+  ]
+} 

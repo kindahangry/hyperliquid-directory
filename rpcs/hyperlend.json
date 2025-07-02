@@ -1,0 +1,10 @@
+{
+  "entity": "hyperlend",
+  "endpoints": [
+    {
+      "name": "HyperLend",
+      "url": "https://rpc.hyperlend.finance",
+      "description": "The banking infrastructure built for Hyperliquid"
+    }
+  ]
+} 

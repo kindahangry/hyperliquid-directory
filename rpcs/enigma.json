@@ -1,0 +1,10 @@
+{
+  "entity": "enigma",
+  "endpoints": [
+    {
+      "name": "Enigma",
+      "url": "https://hyperliquid-rpc.enigma-validator.com/evm",
+      "description": "Public RPC provided by Enigma"
+    }
+  ]
+} 

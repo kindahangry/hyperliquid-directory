@@ -1,0 +1,10 @@
+{
+  "entity": "imperator",
+  "endpoints": [
+    {
+      "name": "Imperator EU",
+      "url": "https://rpc-eu-hyperliquid.imperator.co/evm",
+      "description": "EU endpoint"
+    }
+  ]
+} 
