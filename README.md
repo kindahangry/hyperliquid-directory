@@ -24,7 +24,7 @@ A community‑maintained index of public endpoints, peers, dashboards and other 
 git clone https://github.com/<you>/hyperliquid-directory.git
 cd hyperliquid-directory
 
-# Add your RPC (required)
+# Add your resource, e.g.
 echo '{
   "entity": "your-name",
   "endpoints": [{
