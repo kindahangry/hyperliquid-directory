@@ -1,0 +1,10 @@
+{
+  "entity": "hypurr-fi",
+  "apis": [
+    {
+      "name": "Hyperscan API",
+      "url": "https://www.hyperscan.com/api-docs",
+      "description": "Public API for the Hyperscan explorer providing blockchain data access"
+    }
+  ]
+} 

@@ -1,0 +1,10 @@
+{
+  "entity": "allium",
+  "indexers": [
+    {
+      "name": "Allium",
+      "url": "https://docs.allium.so/historical-data/supported-blockchains/hyperliquid",
+      "description": "Blockchain data platform that empowers analytics, application development, and accounting"
+    }
+  ]
+} 
