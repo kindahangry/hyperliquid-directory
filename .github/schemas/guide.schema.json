@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["entity", "guides"],
+  "properties": {
+    "entity": {
+      "type": "string",
+      "description": "Entity ID that matches the filename"
+    },
+    "guides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["title", "description", "url"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Guide title"
+          },
+          "description": {
+            "type": "string",
+            "description": "What this guide covers"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the guide"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["tutorial", "video", "article", "documentation", "course", "other"],
+            "description": "Type of guide"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["beginner", "intermediate", "advanced"],
+            "description": "Difficulty level"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Topics covered in the guide"
+          },
+          "language": {
+            "type": "string",
+            "description": "Language of the guide (e.g., 'en', 'es', 'zh')"
+          },
+          "duration": {
+            "type": "string",
+            "description": "Estimated time to complete (e.g., '30 min', '2 hours')"
+          }
+        }
+      }
+    }
+  }
+} 

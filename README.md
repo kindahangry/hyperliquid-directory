@@ -1,119 +1,74 @@
 # Hyperliquid Directory
 
-A community‑maintained index of public endpoints, peers, dashboards and other resources that power the Hyperliquid ecosystem.
+Community-maintained index of public infrastructure for Hyperliquid.
 
-## What's here
+## Categories
 
-- **RPCs** - Public RPC endpoints
-- **Peers** - P2P seed addresses  
-- **Explorers** - Block explorers & dashboards
-- **Meta** - Provider info (logos, websites, socials)
-- **Analytics** - Any dashboards - Dune, custom, etc 
-- **Tools** - Scripts, SDKs, clients, other tools
+- **[RPCs](rpcs/)** - Public RPC endpoints
+- **[Peers](peers/)** - P2P node addresses  
+- **[Explorers](explorers/)** - Block explorers & dashboards
+- **[Meta](meta/)** - Provider info (logos, websites, socials)
+- **[Analytics](analytics/)** - Dashboards (Dune, self-hosted, etc)
+- **[Tools](tools/)** - SDKs, CLIs, scripts, clients
+- **[APIs](apis/)** - Indexers, subgraphs, data APIs
+- **[Guides](guides/)** - Tutorials, videos, educational content
+
+Each category has its own README with detailed documentation.
 
 ## How it works
 
 1. Each provider = one JSON file per category
-2. CI validates submissions
-3. Everything gets aggregated at https://hyperliquid.directory
+2. CI validates all submissions automatically
+3. Everything aggregates at https://hyperliquid.directory
 
 ## Quick start
 
 ```bash
-# Fork, clone, add your stuff
+# Fork & clone
 git clone https://github.com/<you>/hyperliquid-directory.git
 cd hyperliquid-directory
 
-# Add your resource, e.g.
-echo '{
-  "entity": "your-name",
+# Example: Add your RPC endpoint
+cat > rpcs/my-provider.json << EOF
+{
+  "entity": "my-provider",
   "endpoints": [{
-    "url": "https://your-rpc.com",
-    "description": "Your RPC description"
+    "url": "https://rpc.my-provider.com/evm",
+    "description": "Fast and reliable Hyperliquid RPC"
   }]
-}' > rpcs/your-name.json
+}
+EOF
+
+# Add your provider info (recommended)
+cat > meta/my-provider.json << EOF
+{
+  "name": "My Provider",
+  "website": "https://my-provider.com",
+  "description": "Professional infrastructure for Hyperliquid",
+  "socials": ["https://x.com/myprovider"]
+}
+EOF
 
 # Test locally
 npm install && npm run validate
 
-# Push & PR
-git add . && git commit -m "add your-name RPC" && git push
+# Submit
+git add . && git commit -m "add my-provider RPC and meta" && git push
+# Then open a pull request
 ```
 
-## File formats
-
-### RPC (`rpcs/your-name.json`)
-```json
-{
-  "entity": "your-name",
-  "endpoints": [{
-    "url": "https://...",
-    "description": "...",
-    "rateLimits": {}
-  }]
-}
-```
-
-### Peers (`peers/your-name.json`)
-```json
-{
-  "entity": "your-name", 
-  "addresses": ["1.2.3.4", "5.6.7.8"]
-}
-```
-
-### Explorer (`explorers/your-name.json`)
-```json
-{
-  "entity": "your-name",
-  "description": "Your explorer",
-  "website": "https://..."
-}
-```
-
-### Meta (`meta/your-name.json`) - optional
-```json
-{
-  "name": "Your Name",
-  "website": "https://...",
-  "description": "What you do",
-  "logoUrl": "https://...",
-  "socials": ["https://x.com/..."]
-}
-```
-
-### Analytics (`analytics/your-name.json`)
-```json
-{
-  "entity": "your-name",
-  "dashboards": [{
-    "name": "Dashboard Name",
-    "url": "https://...",
-    "description": "What it shows",
-    "type": "dune"  // or "custom", "other"
-  }]
-}
-```
-
-### Tools (`tools/your-name.json`)
-```json
-{
-  "entity": "your-name",
-  "tools": [{
-    "name": "Tool Name",
-    "description": "What it does",
-    "url": "https://github.com/...",
-    "type": "sdk",  // or "cli", "script", "client", "other"
-    "language": "Python"
-  }]
-}
-```
+See category READMEs for complete file format documentation.
 
 ## Public RPC
 
 `https://rpc.hyperliquid.directory/evm`
 
-Geo-distributed and load-balanced across all community endpoints. Respects provider-level rate limits as configured here. Is a L7 proxy, so for optimal reliability, providers will ideally rely on `X-Forwarded-For` headers for requests sourced from our loadbalancers. Please [reach out](https://t.me/murakamikaze) for support on this!   
+Load-balanced across all community endpoints. Rate limits per IP:
+- 10 req/s
+- 800 req/10s
+- 3,840 req/min
+- 30,720 req/10min
+- 147,456 req/hour
 
 Live status: https://hyperliquid.directory/rpcs
 
@@ -121,7 +76,24 @@ Live status: https://hyperliquid.directory/rpcs
 
 - One provider = one JSON file per category
 - Entity names must match across files (e.g., `validao` everywhere)
+- Logos: ≤2MB, ideally ≤512×512px
 - CI blocks merge if validation fails
 
 ## Contributing
-Feel free to add categories if you have a resource that doesn't fit into any of the existing ones.
+
+1. Check the README in the relevant category folder for file format
+2. Create your JSON file(s)
+3. Run validation locally
+4. Submit a PR
+
+See individual category READMEs for detailed examples and best practices.
+
+## Validation
+
+The `npm run validate` command checks all JSON files against their schemas. It ensures:
+- Valid JSON syntax
+- Required fields are present
+- URLs are properly formatted
+- Entity names match filenames
+
+No warnings should appear - just green checkmarks for valid files.

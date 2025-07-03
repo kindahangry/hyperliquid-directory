@@ -4,8 +4,10 @@ import { relative, resolve, dirname } from 'node:path';
 import process from 'node:process';
 import { globby } from 'globby';
 import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
 
 const ajv = new Ajv({ allErrors: true, strict: false });
+addFormats(ajv);
 
 // Load all schema files first so $ref works across them
 async function loadSchemas() {
@@ -21,7 +23,7 @@ async function loadSchemas() {
 }
 
 async function validateFiles() {
-  const jsonPaths = await globby(['rpcs/*.json', 'peers/*.json', 'explorers/*.json', 'meta/*.json', 'analytics/*.json', 'tools/*.json']);
+  const jsonPaths = await globby(['rpcs/*.json', 'peers/*.json', 'explorers/*.json', 'meta/*.json', 'analytics/*.json', 'tools/*.json', 'apis/*.json', 'guides/*.json']);
   let hasError = false;
 
   for (const p of jsonPaths) {
@@ -60,6 +62,12 @@ async function validateFiles() {
           break;
         case 'tools':
           schemaPath = resolve('.github/schemas/tools.schema.json');
+          break;
+        case 'apis':
+          schemaPath = resolve('.github/schemas/api.schema.json');
+          break;
+        case 'guides':
+          schemaPath = resolve('.github/schemas/guide.schema.json');
           break;
         default:
           console.error(`❌  Cannot infer schema for ${p}. Please add $schema field.`);
