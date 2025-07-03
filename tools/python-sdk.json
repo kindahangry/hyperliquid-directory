@@ -1,0 +1,10 @@
+{
+  "entity": "Hyperliquid Labs",
+  "tools": [{
+    "name": "hyperliquid-python-sdk",
+    "description": "SDK for Hyperliquid API trading with Python",
+    "url": "https://github.com/hyperliquid-dex/hyperliquid-python-sdk/tree/master",
+    "type": "sdk",
+    "language": "Python"
+  }]
+}
