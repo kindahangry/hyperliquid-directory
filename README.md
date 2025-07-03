@@ -1,6 +1,6 @@
 # Hyperliquid Directory
 
-Community-maintained index of public infrastructure for Hyperliquid.
+Community-maintained index of public infrastructure for Hyperliquid. Resources are listed here: https://hyperliquid.directory
 
 ## Categories
 
