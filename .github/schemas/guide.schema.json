@@ -27,11 +27,6 @@
             "format": "uri",
             "description": "Link to the guide"
           },
-          "type": {
-            "type": "string",
-            "enum": ["tutorial", "video", "article", "documentation", "course", "other"],
-            "description": "Type of guide"
-          },
           "difficulty": {
             "type": "string",
             "enum": ["beginner", "intermediate", "advanced"],
@@ -43,14 +38,6 @@
               "type": "string"
             },
             "description": "Topics covered in the guide"
-          },
-          "language": {
-            "type": "string",
-            "description": "Language of the guide (e.g., 'en', 'es', 'zh')"
-          },
-          "duration": {
-            "type": "string",
-            "description": "Estimated time to complete (e.g., '30 min', '2 hours')"
           }
         }
       }
