@@ -1,0 +1,9 @@
+{
+  "name": "dRPC",
+  "website": "https://drpc.org",
+  "description": "dRPC is a multi-chain RPC provider, supporting 145+ networks. The backend RPCs are opearted by independent operators, ensuring high availability.",
+  "logoUrl": "https://drpc.org/_next/static/media/dRPC_fullcollor_white.0c615983.svg",
+  "socials": [
+    "https://x.com/dRPCorg"
+  ]
+}
