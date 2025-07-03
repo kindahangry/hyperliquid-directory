@@ -52,10 +52,6 @@ EOF
 
 # Test locally
 npm install && npm run validate
-
-# Submit
-git add . && git commit -m "add my-provider RPC and meta" && git push
-# Then open a pull request
 ```
 
 See category READMEs for complete file format documentation.
@@ -73,28 +69,7 @@ Load-balanced across all community endpoints. Rate limits per IP:
 
 Live status: https://hyperliquid.directory/rpcs
 
-## Rules
-
-- One provider = one JSON file per category
-- Entity names must match across files (e.g., `validao` everywhere)
-- Logos: ≤2MB, ideally ≤512×512px
-- CI blocks merge if validation fails
 
 ## Contributing
 
-1. Check the README in the relevant category folder for file format
-2. Create your JSON file(s)
-3. Run validation locally
-4. Submit a PR
-
-See individual category READMEs for detailed examples and best practices.
-
-## Validation
-
-The `npm run validate` command checks all JSON files against their schemas. It ensures:
-- Valid JSON syntax
-- Required fields are present
-- URLs are properly formatted
-- Entity names match filenames
-
-No warnings should appear - just green checkmarks for valid files.
+Check the README in the relevant category for formats and examples
