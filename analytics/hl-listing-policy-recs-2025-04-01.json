@@ -1,0 +1,9 @@
+{
+  "entity": "stalequant",
+  "dashboards": [{
+    "name": "Hyperliquid Listing Policy Recommendations 2025-04-01",
+    "url": "https://stalequant.github.io/hyperliquid_recos.html",
+    "description": "This page offered recommendations on listing and delisting policies for HL in April 2025",
+    "type": "custom"
+  }]
+}

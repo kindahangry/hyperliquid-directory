@@ -29,7 +29,7 @@
           },
           "type": {
             "type": "string",
-            "enum": ["dune", "self-hosted", "other"],
+            "enum": ["dune", "custom", "other"],
             "description": "Type of dashboard"
           }
         }

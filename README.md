@@ -8,7 +8,7 @@ A community‑maintained index of public endpoints, peers, dashboards and other 
 - **Peers** - P2P seed addresses  
 - **Explorers** - Block explorers & dashboards
 - **Meta** - Provider info (logos, websites, socials)
-- **Analytics** - Any dashboards - Dune, self hosted, etc 
+- **Analytics** - Any dashboards - Dune, custom, etc 
 - **Tools** - Scripts, SDKs, clients, other tools
 
 ## How it works
@@ -90,7 +90,7 @@ git add . && git commit -m "add your-name RPC" && git push
     "name": "Dashboard Name",
     "url": "https://...",
     "description": "What it shows",
-    "type": "dune"  // or "self-hosted", "other"
+    "type": "dune"  // or "custom", "other"
   }]
 }
 ```
