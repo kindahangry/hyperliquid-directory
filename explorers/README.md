@@ -62,9 +62,7 @@ Good explorers typically include:
 
 ## Contributing
 
-1. Fork the repository
-2. Create your explorer file: `explorers/your-entity.json`
-3. Ensure it passes validation: `npm run validate`
-4. Submit a pull request
-
-Your explorer will be listed on the Hyperliquid Directory for community discovery. 
+1. Fork
+2. Add your resource: `explorers/your-entity.json`
+3. Pass validation: `npm run validate`
+4. Submit a PR 

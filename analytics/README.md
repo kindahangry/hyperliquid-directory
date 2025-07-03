@@ -1,7 +1,5 @@
 # Analytics Dashboards
 
-Analytics platforms and dashboards providing insights into the Hyperliquid ecosystem.
-
 ## File Format
 
 Each provider should create one JSON file named `<entity-name>.json` with the following structure:
@@ -27,12 +25,12 @@ Each provider should create one JSON file named `<entity-name>.json` with the fo
   - **name** (required): Display name for the dashboard
   - **url** (required): Direct link to the dashboard
   - **description** (required): What data/insights the dashboard provides
-  - **type** (optional): Platform type - `"dune"`, `"self-hosted"`, or `"other"`
+  - **type** (optional): Platform type - `"dune"`, `"custom"`, or `"other"`
 
 ## Dashboard Types
 
 - **Dune Analytics**: SQL-based blockchain analytics platform
-- **Self-hosted**: Custom analytics solutions you maintain
+- **Custom**: Custom analytics solutions you maintain
 - **Other**: Alternative analytics platforms (Flipside, etc.)
 
 ## Examples
@@ -61,7 +59,7 @@ Each provider should create one JSON file named `<entity-name>.json` with the fo
       "name": "Network Health Monitor",
       "url": "https://analytics.example.com/network",
       "description": "Real-time network performance and validator metrics",
-      "type": "self-hosted"
+      "type": "custom"
     },
     {
       "name": "Token Economics",
@@ -73,29 +71,9 @@ Each provider should create one JSON file named `<entity-name>.json` with the fo
 }
 ```
 
-## Best Practices
-
-1. **Accuracy**: Ensure data sources are reliable and queries are correct
-2. **Performance**: Optimize dashboard load times
-3. **Documentation**: Explain metrics and data sources
-4. **Updates**: Keep dashboards current with latest data
-5. **Accessibility**: Make dashboards public when possible
-
-## Common Analytics Topics
-
-- Network statistics (TPS, block times, fees)
-- DeFi metrics (TVL, volume, liquidity)
-- Validator performance and distribution
-- Token economics and distribution
-- User activity and growth
-- Cross-chain bridge activity
-- Smart contract interactions
-
 ## Contributing
 
-1. Fork the repository
-2. Create your analytics file: `analytics/your-entity.json`
-3. Ensure it passes validation: `npm run validate`
-4. Submit a pull request
-
-Your dashboards help the community understand and analyze the Hyperliquid ecosystem. 
+1. Fork
+2. Add your resource : `analytics/your-entity.json`
+3. Pass validation: `npm run validate`
+4. Submit a PR

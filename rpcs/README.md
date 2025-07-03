@@ -1,6 +1,6 @@
 # RPC Endpoints
 
-Public RPC endpoints for interacting with the Hyperliquid blockchain.
+Public RPCs for interacting with HL.
 
 ## File Format
 
@@ -32,14 +32,6 @@ Each provider should create one JSON file named `<entity-name>.json` with the fo
   - **description** (optional): Brief description of the endpoint
   - **rateLimits** (optional): Object with rate limit details
     - Can include any key-value pairs like `requests_per_second`, `requests_per_minute`, etc.
-
-## Best Practices
-
-1. **Reliability**: Ensure your RPC endpoint has high uptime
-2. **Performance**: Optimize for low latency responses
-3. **Rate Limits**: Clearly document any rate limiting
-4. **HTTPS**: Always use secure connections
-5. **Load Balancing**: Consider geographic distribution for better performance
 
 ## Examples
 
@@ -89,17 +81,15 @@ All community RPCs are aggregated into a single load-balanced endpoint:
 
 `https://rpc.hyperliquid.directory/evm`
 
-This provides:
+Which provides:
 - Automatic failover between providers
 - Geographic routing for optimal latency
-- Aggregated rate limits across all providers
 - Health monitoring and automatic exclusion of failing endpoints
 
 ## Contributing
 
-1. Fork the repository
-2. Create your RPC file: `rpcs/your-entity.json`
-3. Ensure it passes validation: `npm run validate`
-4. Submit a pull request
+## Contributing
 
-Your RPC will be automatically included in the load balancer once merged.
+1. Add your resource
+2. Run `npm run validate`
+3. Submit PR

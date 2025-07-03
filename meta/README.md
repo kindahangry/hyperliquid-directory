@@ -1,6 +1,6 @@
 # Provider Metadata
 
-Additional information about infrastructure providers including logos, websites, and social links.
+ Information about resource providers including logos, websites, social links.
 
 ## File Format
 
@@ -28,14 +28,6 @@ Create one JSON file named `<entity-name>.json` with the following structure:
   - Alternatively, place logo file in `/logo/<entity-name>.png`
 - **socials** (optional): Array of social media profile URLs
 
-## Logo Guidelines
-
-If providing a logo:
-- **Format**: PNG, SVG, or JPG
-- **Size**: ≤2MB, ideally ≤512×512px
-- **Background**: Transparent preferred for PNG/SVG
-- **Naming**: Match your entity name (e.g., `logo/your-entity.png`)
-
 ## Examples
 
 ### Minimal Metadata
@@ -60,20 +52,8 @@ If providing a logo:
 }
 ```
 
-## Best Practices
-
-1. **Consistency**: Use the same entity name across all categories
-2. **Professionalism**: Provide accurate, up-to-date information
-3. **Accessibility**: Ensure logos work on light and dark backgrounds
-4. **Contact**: Include at least one way for users to reach you
-5. **Updates**: Keep your information current
-
 ## Contributing
 
-1. Fork the repository
-2. Create your meta file: `meta/your-entity.json`
-3. (Optional) Add your logo: `logo/your-entity.png`
-4. Ensure it passes validation: `npm run validate`
-5. Submit a pull request
-
-Your metadata enhances your presence across the Hyperliquid Directory.
+1. Add your resource: `apis/your-entity.json`
+2. Run `npm run validate`
+3. Submit PR

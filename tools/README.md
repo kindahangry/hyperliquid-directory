@@ -1,6 +1,6 @@
 # Developer Tools
 
-SDKs, CLIs, scripts, and other tools for building on Hyperliquid.
+SDKs, CLIs, scripts, and other dev tooling for building on Hyperliquid.
 
 ## File Format
 
@@ -87,29 +87,8 @@ Each provider should create one JSON file named `<entity-name>.json` with the fo
 }
 ```
 
-## Best Practices
-
-1. **Documentation**: Provide comprehensive docs and examples
-2. **Maintenance**: Keep tools updated with latest Hyperliquid changes
-3. **Testing**: Include unit tests and integration tests
-4. **Versioning**: Use semantic versioning
-5. **License**: Choose an appropriate open-source license
-
-## Common Tool Categories
-
-- Trading bots and algorithms
-- Wallet integrations
-- Smart contract development tools
-- Node monitoring and management
-- Data analysis scripts
-- Testing frameworks
-- Bridge integrations
-
 ## Contributing
 
-1. Fork the repository
-2. Create your tools file: `tools/your-entity.json`
-3. Ensure it passes validation: `npm run validate`
-4. Submit a pull request
-
-Your tools help developers build amazing applications on Hyperliquid. 
+1. Add your resource: `apis/your-entity.json`
+2. Run `npm run validate`
+3. Submit PR
