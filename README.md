@@ -40,7 +40,7 @@ cat > rpcs/my-provider.json << EOF
 }
 EOF
 
-# Add your provider info (recommended)
+# Add your entity info
 cat > meta/my-provider.json << EOF
 {
   "name": "My Provider",
@@ -63,9 +63,6 @@ See category READMEs for complete file format documentation.
 Load-balanced across all community endpoints. Rate limits per IP:
 - 10 req/s
 - 800 req/10s
-- 3,840 req/min
-- 30,720 req/10min
-- 147,456 req/hour
 
 Live status: https://hyperliquid.directory/rpcs
 
