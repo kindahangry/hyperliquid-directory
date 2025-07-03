@@ -23,7 +23,7 @@ async function loadSchemas() {
 }
 
 async function validateFiles() {
-  const jsonPaths = await globby(['rpcs/*.json', 'peers/*.json', 'explorers/*.json', 'meta/*.json', 'analytics/*.json', 'tools/*.json', 'apis/*.json', 'guides/*.json']);
+  const jsonPaths = await globby(['rpcs/*.json', 'peers/*.json', 'explorers/*.json', 'meta/*.json', 'analytics/*.json', 'tools/*.json', 'indexers/*.json', 'guides/*.json', 'apis/*.json']);
   let hasError = false;
 
   for (const p of jsonPaths) {
@@ -62,6 +62,9 @@ async function validateFiles() {
           break;
         case 'tools':
           schemaPath = resolve('.github/schemas/tools.schema.json');
+          break;
+        case 'indexers':
+          schemaPath = resolve('.github/schemas/indexer.schema.json');
           break;
         case 'apis':
           schemaPath = resolve('.github/schemas/api.schema.json');

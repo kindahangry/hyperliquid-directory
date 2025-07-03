@@ -12,52 +12,23 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["name", "type", "description"],
+        "required": ["name", "url"],
         "properties": {
           "name": {
             "type": "string",
             "description": "API name"
           },
-          "type": {
+          "url": {
             "type": "string",
-            "enum": ["indexer", "subgraph", "rest", "graphql", "websocket", "other"],
-            "description": "Type of API"
+            "format": "uri",
+            "description": "API documentation or endpoint URL"
           },
           "description": {
             "type": "string",
             "description": "What this API provides"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "description": "API endpoint URL"
-          },
-          "documentation": {
-            "type": "string",
-            "format": "uri",
-            "description": "Link to API documentation"
-          },
-          "playground": {
-            "type": "string",
-            "format": "uri",
-            "description": "Link to API playground or explorer"
-          },
-          "features": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of features or data types available"
-          },
-          "rateLimits": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "number"
-            },
-            "description": "Rate limits if applicable"
           }
         }
       }
     }
   }
-} 
+}

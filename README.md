@@ -8,9 +8,10 @@ Community-maintained index of public infrastructure for Hyperliquid.
 - **[Peers](peers/)** - P2P node addresses  
 - **[Explorers](explorers/)** - Block explorers & dashboards
 - **[Meta](meta/)** - Provider info (logos, websites, socials)
-- **[Analytics](analytics/)** - Dashboards (Dune, self-hosted, etc)
+- **[Analytics](analytics/)** - Dashboards (Dune, custom, etc)
 - **[Tools](tools/)** - SDKs, CLIs, scripts, clients
-- **[APIs](apis/)** - Indexers, subgraphs, data APIs
+- **[Indexers](indexers/)** - Blockchain data platforms and indexers
+- **[APIs](apis/)** - Direct API endpoints and documentation
 - **[Guides](guides/)** - Tutorials, videos, educational content
 
 Each category has its own README with detailed documentation.
