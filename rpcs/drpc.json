@@ -2,7 +2,7 @@
   "entity": "drpc",
   "endpoints": [
     {
-      "name": "DRPC",
+      "name": "dRPC",
       "url": "https://hyperliquid.drpc.org",
       "description": "dRPC is a multi-chain RPC provider, supporting 145+ networks. The backend RPCs are opearted by independent operators, ensuring high availability."
     }
