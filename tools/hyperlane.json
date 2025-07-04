@@ -1,0 +1,12 @@
+{
+  "entity": "Hyperlane",
+  "tools": [
+    {
+      "name": "Hyperlane Default Validators",
+      "description": "Cross-chain messaging with default validator support.",
+      "url": "https://docs.hyperlane.xyz/docs/reference/default-ism-validators",
+      "type": "sdk",
+      "language": "Solidity"
+    }
+  ]
+} 
